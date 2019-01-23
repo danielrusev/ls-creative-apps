@@ -1,4 +1,4 @@
-only works with [Python 2.7](https://www.python.org/download/releases/2.7/) and it was tested with Node v6. There are two basic ways of installing A.I. Duet: with Docker or without Docker.
+only works with [Python 2.7](https://www.python.org/download/releases/2.7/) and it was tested with Node v6. There are two basic ways of installing : with Docker or without Docker.
 
 If you already have a Python environment setup, install all of the server dependencies and start the server by typing the following in the terminal:
 
@@ -7,52 +7,14 @@ cd server
 pip install -r requirements.txt
 ```
 
-If this does not work, jump down to the [Docker](#docker) installation instructions, which will walk you through installing A.I. Duet within a Docker container.
-
 If it _did_ install tensorflow and magenta successfully, you can run the server by typing:
 
 ```bash
 python server.py
 ```
 
-Then to build and install the front-end Javascript code, first make sure you have [Node.js](https://nodejs.org) 6 installed. And then install of the dependencies of the project and build the code by typing the following in the terminal: 
-
-```bash
-cd static
-npm install
-npm run build
-```
-
-You can now play with A.I. Duet at [localhost:8080](http://localhost:8080).
-
-## DOCKER
-
-[Docker](https://www.docker.com/) is an open-source containerization software which simplifies installation across various OSes. It is the simplest method to build and install both the front-end and back-end components. Once you have Docker installed, you can just run: 
-
-```bash
-$ sudo docker build -t ai-duet .
-$ sudo docker run -t -p 8080:8080 ai-duet
-```
-
-You can now play with A.I. Duet at [localhost:8080](http://localhost:8080).
-
-## MIDI SUPPORT
-
-The A.I. Duet supports MIDI keyboard input using [Web Midi API](https://webaudio.github.io/web-midi-api/) and the [WebMIDI](https://github.com/cotejp/webmidi) library. 
-
-## PIANO KEYBOARD
-
-The piano can also be controlled from your computer keyboard thanks to [Audiokeys](https://github.com/kylestetz/AudioKeys). The center row of the keyboard is the white keys.
-
-## AUDIO SAMPLES
-
-Multisampled piano from [Salamander Grand Piano V3](https://archive.org/details/SalamanderGrandPianoV3) by Alexander Holm ([Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/)).
-
-String sounds from [MIDI.js Soundfonts](https://github.com/gleitz/midi-js-soundfonts) generated from [FluidR3_GM.sf2](http://www.musescore.org/download/fluid-soundfont.tar.gz) ([Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/)).
 
 ## LICENSE
-
-Copyright 2016 Google Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
